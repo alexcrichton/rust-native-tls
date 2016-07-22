@@ -59,7 +59,7 @@ impl<S: fmt::Debug> fmt::Debug for TlsStream<S> {
     }
 }
 
-impl<S: io::Read + io::Write> TlsStream<S> {
+impl<S> TlsStream<S> {
     pub fn get_ref(&self) -> &S {
         self.0.get_ref()
     }
